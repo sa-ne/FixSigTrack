@@ -24,4 +24,13 @@ To support the above languages I have the following installed:
     
 After cloning this repository you can execute the `build.sh` script.  This script basically will created a target folder tree and compile each of the sample code files from the src tree.  If you have the `tree` command installed then you can verify that the `src` tree is mirrored in the `target` tree.
 
-At this point you can execute `scan.sh` or `scan2.sh`.  The first script (`scan.sh`) executes a scan using a generic rule.  The other script executes a rule containing a more specific signature.
+At this point you can execute `scan.sh` or `scan2.sh`.  The first script (`scan.sh`) executes a scan using a generic rule.  This would result in the output as below:
+
+      Fix_ID_2017_2423_2019_17571 [RHSA_ID="RHSA-2017:2423",CVE_ID="CVE-2019-17571"] target/java/TestJava2.class
+      Fix_ID_2017_2423_2019_17571 [RHSA_ID="RHSA-2017:2423",CVE_ID="CVE-2019-17571"] target/c/TestC2
+      Fix_ID_2017_2423_2019_17571 [RHSA_ID="RHSA-2017:2423",CVE_ID="CVE-2019-17571"] target/c++/TestCPP2
+      Fix_ID_2017_2423_2019_17571 [RHSA_ID="RHSA-2017:2423",CVE_ID="CVE-2019-17571"] target/go/TestGo2
+
+The other script executes a rule containing a more specific signature resulting in fewer matches:
+
+      Fix_ID_2017_2423_2019_17571 [RHSA_ID="RHSA-2017:2423",CVE_ID="CVE-2019-17571"] target/java/TestJava2.class
