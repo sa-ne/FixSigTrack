@@ -1,0 +1,15 @@
+rule Fix_ID_2017_2423_2019_17571
+  {
+    meta:
+        RHSA_ID = "RHSA-2017:2423"
+        CVE_ID = "CVE-2019-17571"
+    strings:
+        // Hex for: SourceFile...TestJava2.java
+        $marker1 = { 53 6F 75 72 63 65 46 69 6C 65 01 00 0E 54 65 73 74 4A 61 76 61 32 2E 6A 61 76 61 }
+
+        // Hex for: RHSA-2017:2423_CVE-2019-17571
+        $marker2 = { 01 00 1D 52 48 53 41 2D 32 30 31 37 3A 32 34 32 33 5F 43 56 45 2D 32 30 31 39 2D 31 37 35 37 31 }
+
+    condition:
+        $marker1 and $marker2
+  }
