@@ -1,7 +1,7 @@
 # Fix-Signature Tracking (FixSigTrack)
 Exploring an approach to inserting and tracking code fix markers in binaries.
 
-This is an exploration of using the yara (https://virustotal.github.io/yara/) tool as a mechanism to articulate "rules" for identification of "signature" markers associated with code fixes.  Product Security Advisories may be issued in response to documented CVE exposures.  At Red Hat these are called Red Hat Security Advisories or RHSAs.  An RHSA may span multiple CVEs.  The signaturing approach facilitated by yara can provide specific fix-level granularity reporting on a produced binary.
+This is an exploration of using the yara (https://virustotal.github.io/yara/) tool as a mechanism to articulate "rules" for identification of "signature" markers associated with code fixes.  Product Security Advisories may be issued in response to documented CVE exposures.  At Red Hat these are called Red Hat Security Advisories or RHSAs.  An RHSA may span multiple CVEs.  The signaturing approach facilitated by yara can provide specific fix-level granularity reporting and verification on a produced binary.
 
 This repository demonstrates sucessful signature identification on files built using the following build stacks:
 * C
