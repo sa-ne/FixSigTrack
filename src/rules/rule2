@@ -1,0 +1,11 @@
+rule Fix_ID_2017_2423_2019_17571
+  {
+    meta:
+        RHSA_ID = "RHSA-2017:2423"
+        CVE_ID = "CVE-2019-17571"
+    strings:
+        $marker1 = "RHSA-2017:2423_CVE-2019-17571"
+
+    condition:
+        $marker1
+  }
